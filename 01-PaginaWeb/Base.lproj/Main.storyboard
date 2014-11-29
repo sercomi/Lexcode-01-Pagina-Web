@@ -18,34 +18,43 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-MV-Lye">
-                                <rect key="frame" x="0.0" y="41" width="600" height="559"/>
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co2-fx-BWf">
-                                <rect key="frame" x="16" y="8" width="73" height="30"/>
+                                <rect key="frame" x="511" y="20" width="73" height="30"/>
                                 <state key="normal" title="Ir a página">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToPage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GBM-NJ-qmP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64J-MZ-c7j">
-                                <rect key="frame" x="542" y="8" width="42" height="30"/>
+                                <rect key="frame" x="16" y="20" width="42" height="30"/>
                                 <state key="normal" title="Volver">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9JS-Km-pJq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="WaU-MV-Lye" secondAttribute="trailing" id="28V-Zf-29S"/>
-                            <constraint firstItem="co2-fx-BWf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="8" id="3jq-em-AR7"/>
-                            <constraint firstItem="WaU-MV-Lye" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="EVc-wJ-LFj"/>
-                            <constraint firstItem="co2-fx-BWf" firstAttribute="baseline" secondItem="64J-MZ-c7j" secondAttribute="baseline" id="LeQ-eZ-Jdh"/>
-                            <constraint firstItem="64J-MZ-c7j" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="QuW-c2-Hfe"/>
-                            <constraint firstItem="WaU-MV-Lye" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="rJE-h7-Qxr"/>
-                            <constraint firstItem="WaU-MV-Lye" firstAttribute="top" secondItem="co2-fx-BWf" secondAttribute="bottom" constant="3" id="rnF-v2-FDp"/>
-                            <constraint firstItem="co2-fx-BWf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ugV-xn-hXo"/>
+                            <constraint firstItem="64J-MZ-c7j" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9Kh-a6-SeP"/>
+                            <constraint firstItem="64J-MZ-c7j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Byh-lp-GVu"/>
+                            <constraint firstItem="64J-MZ-c7j" firstAttribute="baseline" secondItem="co2-fx-BWf" secondAttribute="baseline" id="NtG-ES-SwV"/>
+                            <constraint firstAttribute="trailing" secondItem="WaU-MV-Lye" secondAttribute="trailing" id="cwA-DA-ySr"/>
+                            <constraint firstItem="WaU-MV-Lye" firstAttribute="top" secondItem="64J-MZ-c7j" secondAttribute="bottom" constant="8" symbolic="YES" id="lZ3-Cp-aoP"/>
+                            <constraint firstItem="co2-fx-BWf" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="lgW-Jh-dg2"/>
+                            <constraint firstItem="WaU-MV-Lye" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="mLa-ol-DFR"/>
+                            <constraint firstItem="WaU-MV-Lye" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="saW-cR-TdM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="WaU-MV-Lye" id="Jjf-O7-VE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
