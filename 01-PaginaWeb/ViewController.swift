@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func goBack(sender: AnyObject) {
+        
+        let myWeb = NSURL(string: "http://sercomi.com")
+        
+        var urlRequest = NSURLRequest(URL: myWeb!)
+        
+        webView.loadRequest(urlRequest)
     }
     
     override func viewDidLoad() {
